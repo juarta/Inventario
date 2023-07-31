@@ -1,0 +1,25 @@
+﻿@model Inventario.Controllers.SuministroController
+
+<h2>Ingresar nuevo Suministro</h2>
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.LabelFor(model => model.Nombre)
+        @Html.TextBoxFor(model => model.Nombre, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.UnidadMedida)
+        @Html.TextBoxFor(model => model.UnidadMedida, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.CantidadMinima)
+        @Html.TextBoxFor(model => model.CantidadMinima, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.CantidadMaxima)
+        @Html.TextBoxFor(model => model.CantidadMaxima, new { @class = "form-control" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
+}

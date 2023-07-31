@@ -1,0 +1,33 @@
+﻿@model List<Inventario.Models.Suministro>
+
+<h2>Inventario de Suministros</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Nombre</th>
+            <th>Unidad de Medida</th>
+            <th>Cantidad Actual</th>
+            <th>Cantidad Mínima</th>
+            <th>Cantidad Máxima</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var suministro in Model)
+        {
+            <tr>
+                <td>@suministro.CodigoProducto</td>
+                <td>@suministro.Nombre</td>
+                <td>@suministro.UnidadMedida</td>
+                <td>@suministro.CantidadActual</td>
+                <td>@suministro.CantidadMinima</td>
+                <td>@suministro.CantidadMaxima</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<p>
+    @Html.ActionLink("Agregar nuevo suministro", "Crear")
+</p>
